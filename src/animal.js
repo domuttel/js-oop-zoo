@@ -1,6 +1,6 @@
 function Animal(name, age, kind){
   this.name = name;
-  this.age = age;
+  this.age = 0;
   this.kind = kind;
   this.awake = false;
 }
@@ -21,8 +21,10 @@ Animal.prototype.growUp = function() {
 
 Animal.prototype.feed = function() {
   if (this.awake === true) {
-  }
     return "NOM NOM NOM";
+  } else {
+    return "Can\'t eat, sleeping...";
+  }
 };
 
 Animal.prototype.wakeUp = function() {
